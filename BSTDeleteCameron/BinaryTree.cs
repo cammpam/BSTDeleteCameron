@@ -198,6 +198,20 @@ namespace BSTDeleteCameron
             }
         }
 
+        public Node ArrToBST(int[] arr, int start, int end)
+        {
+            if (start > end)
+            {
+                return null;
+            }
+            int mid = (start + end) / 2;
+            Node aNode = new Node(arr[mid]);
+            aNode.Left = ArrToBST(arr, start, mid - 1);
+            aNode.Right = ArrToBST(arr, mid + 1, end);
+            return aNode;
+        }
+
+
         public void Print(Node node)
         {
             Console.WriteLine(node.Data);
@@ -209,6 +223,8 @@ namespace BSTDeleteCameron
             {
                 Print(node.Right);
             }
+
+
         }
     }
 }

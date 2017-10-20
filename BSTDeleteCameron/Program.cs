@@ -31,6 +31,11 @@ namespace BSTDeleteCameron
             Console.WriteLine(testTree.Remove(testTree.Root, 5).Data);
             Console.WriteLine(testTree.Remove(testTree.Root, 4).Data);
             Console.WriteLine(testTree.Remove(testTree.Root, 7).Data);
+            Console.WriteLine("ARRAY TO BST:");
+            int[] arr = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
+            BinaryTree testTWO = new BinaryTree();
+            testTWO.Root = testTWO.ArrToBST(arr, 0, arr.Length - 1);
+            testTWO.Print(testTWO.Root);
             Console.WriteLine("Print:");
             testTree.Print(testTree.Root);
             Console.Read();
