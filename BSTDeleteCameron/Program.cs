@@ -10,29 +10,21 @@ namespace BSTDeleteCameron
     {
         static void Main(string[] args)
         {
-            BinaryTree testTree = new BinaryTree();
-            testTree.Add(testTree.Root, 5);
-            testTree.Add(testTree.Root, 6);
-            testTree.Add(testTree.Root, 4);
-            testTree.Add(testTree.Root, 1);
-            testTree.Add(testTree.Root, 2);
-            testTree.Add(testTree.Root, 3);
-            testTree.Add(testTree.Root, 7);
-            testTree.Add(testTree.Root, 8);
-            Console.Write("MIN: ");
-            Console.WriteLine(testTree.Min(testTree.Root).Data);
-            Console.Write("MAX: ");
-            Console.WriteLine(testTree.Max(testTree.Root).Data);
-            Console.Write("FIND:");
-            Console.WriteLine(testTree.FindParent(testTree.Root, 8).Data);
-            Console.WriteLine("Print:");
-            testTree.Print(testTree.Root);
-            Console.Write("REMOVE:");
-            Console.WriteLine(testTree.Remove(testTree.Root, 5).Data);
-            Console.WriteLine(testTree.Remove(testTree.Root, 4).Data);
-            Console.WriteLine(testTree.Remove(testTree.Root, 7).Data);
-            Console.WriteLine("Print:");
-            testTree.Print(testTree.Root);
+            BinaryTree newTree = new BinaryTree();
+            newTree.Add(newTree.Root, 5);
+            newTree.Add(newTree.Root, 6);
+            newTree.Add(newTree.Root, 4);
+            newTree.Add(newTree.Root, 1);
+            newTree.Add(newTree.Root, 2);
+            newTree.Add(newTree.Root, 3);
+            newTree.Add(newTree.Root, 7);
+            newTree.Add(newTree.Root, 8);
+            Console.WriteLine("Delete:");
+            Console.WriteLine(newTree.Remove(newTree.Root, 5).Data);
+            Console.WriteLine(newTree.Remove(newTree.Root, 4).Data);
+            Console.WriteLine(newTree.Remove(newTree.Root, 7).Data);
+            Console.WriteLine("New Tree:");
+            newTree.Print(newTree.Root);
             Console.Read();
         }
     }
